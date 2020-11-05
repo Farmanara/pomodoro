@@ -164,7 +164,7 @@ class Clock extends React.Component {
 
   render() {
     return (
-      <div className=" container-sm text-center vertical-center">
+      <div className=" pt-4 container-sm text-center vertical-center">
         <label id="session-label">Session Length</label>
         <div className="row justify-content-center">
           <button
@@ -190,7 +190,9 @@ class Clock extends React.Component {
             +
           </button>
         </div>
-        <label id="break-label">Break Length</label>
+        <label className="pt-4" id="break-label">
+          Break Length
+        </label>
 
         <div className="row justify-content-center">
           <button
@@ -215,21 +217,28 @@ class Clock extends React.Component {
           </button>
         </div>
         <div>
-          <div className="h3" id="timer-label">
+          <div className="h3 p-5" id="timer-label">
             {this.state.timerName}
           </div>
-        </div>
-        <div className="row h1 justify-content-center">
-          <div className="jumbotron font-weight-bold" id="time-left">
+
+          <div
+            className="d-inline-flex p-5 h1 font-weight-bold border border-primary rounded-circle"
+            id="time-left"
+          >
             {this.state.minutes}:{this.state.seconds}{" "}
           </div>
         </div>
+
         <div>
-          <button className="btn btn-danger" id="reset" onClick={this.reset}>
+          <button
+            className="p-2 m-2 btn btn-danger"
+            id="reset"
+            onClick={this.reset}
+          >
             Reset
           </button>
           <button
-            className="btn btn-success"
+            className="p-2 btn btn-success"
             id="start_stop"
             onClick={this.startStop}
           >
