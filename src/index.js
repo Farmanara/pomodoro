@@ -72,7 +72,7 @@ class Clock extends React.Component {
             sessionLength: e.target.value,
           },
           () => {
-            this.setState({ timer: this.state.sessionLength * 60 });
+            this.setState({ minutes: this.state.sessionLength });
           }
         );
       }
@@ -164,11 +164,11 @@ class Clock extends React.Component {
 
   render() {
     return (
-      <div className=" pt-4 container-sm text-center vertical-center">
+      <div className=" mt-5 container-sm text-center vertical-center">
         <label id="session-label">Session Length</label>
         <div className="row justify-content-center">
           <button
-            className="btn btn-outline-primary"
+            className="btn btn-lg  btn-outline-primary"
             type="button"
             id="session-decrement"
             onClick={this.sessionDecrement}
@@ -176,6 +176,7 @@ class Clock extends React.Component {
             -
           </button>
           <input
+            className="mx-5"
             id="session-length"
             pattern="[0-9]*"
             type="text"
@@ -183,7 +184,7 @@ class Clock extends React.Component {
             onChange={this.handleChange}
           ></input>
           <button
-            className="btn btn-outline-primary"
+            className=" btn-lg btn btn-outline-primary"
             id="session-increment"
             onClick={this.sessionIncrement}
           >
@@ -196,20 +197,21 @@ class Clock extends React.Component {
 
         <div className="row justify-content-center">
           <button
-            className="btn btn-outline-primary"
+            className="btn  btn-lg btn-outline-primary"
             id="break-decrement"
             onClick={this.breakDecrement}
           >
             -
           </button>
           <input
+            className="mx-5"
             id="break-length"
             type="text"
             value={this.state.breakLength}
             onChange={this.handleChange}
           ></input>
           <button
-            className="btn btn-outline-primary"
+            className="btn btn-lg btn-outline-primary"
             id="break-increment"
             onClick={this.breakIncrement}
           >
@@ -222,7 +224,7 @@ class Clock extends React.Component {
           </div>
 
           <div
-            className="d-inline-flex p-5 h1 font-weight-bold border border-primary rounded-circle"
+            className="d-inline-flex p-5 display-1 font-weight-bold"
             id="time-left"
           >
             {this.state.minutes}:{this.state.seconds}{" "}
