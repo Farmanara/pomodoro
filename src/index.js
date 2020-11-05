@@ -219,12 +219,12 @@ class Clock extends React.Component {
           </button>
         </div>
         <div>
-          <div className="h3 p-5" id="timer-label">
+          <div className="h3 pt-5 mt-5" id="timer-label">
             {this.state.timerName}
           </div>
 
           <div
-            className="d-inline-flex p-5 display-1 font-weight-bold"
+            className="d-inline-flex pb-5 display-1 font-weight-bold"
             id="time-left"
           >
             {this.state.minutes}:{this.state.seconds}{" "}
