@@ -204,7 +204,7 @@ class Clock extends React.Component {
             -
           </button>
           <input
-            className="mx-5"
+            className="mx-5 border border-rounded"
             id="break-length"
             type="text"
             value={this.state.breakLength}
@@ -233,14 +233,14 @@ class Clock extends React.Component {
 
         <div>
           <button
-            className="p-2 m-2 btn btn-danger"
+            className="p-2 m-2 btn btn-danger btn-lg"
             id="reset"
             onClick={this.reset}
           >
             Reset
           </button>
           <button
-            className="p-2 btn btn-success"
+            className="p-2 btn btn-success btn-lg"
             id="start_stop"
             onClick={this.startStop}
           >
